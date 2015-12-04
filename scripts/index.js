@@ -1,3 +1,5 @@
+(function(){
+
 /***
 
 On scroll, tell each playable iframe whether they're on screen,
@@ -11,10 +13,10 @@ Parallax Parameter:
 Pick the last one on screen to be the one being played
 
 ***/
-window.onscroll = function(){
+var onscroll = function(){
 	var scrollY = window.pageYOffset;
 	var innerHeight = window.innerHeight;
-	var playables = document.querySelectorAll(".example > iframe");
+	var playables = document.querySelectorAll(".example>iframe, .splash>iframe");
 	var messages = [];
 
 	// Calculate parallax, and is it the last one on screen?
@@ -38,6 +40,7 @@ window.onscroll = function(){
 
 };
 
-setTimeout(function(){
-	window.onscroll();
-},500);
+window.addEventListener("scroll",onscroll,false);
+setTimeout(onscroll,500);
+
+})();

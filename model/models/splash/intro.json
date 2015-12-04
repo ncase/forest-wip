@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "meow"
+        "description": "none"
     },
     "states": [
         {
@@ -10,7 +10,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 0.002,
+                    "probability": 0.005,
                     "actions": [
                         {
                             "type": "go_to_state",
@@ -83,8 +83,8 @@
             }
         ],
         "size": {
-            "width": 40,
-            "height": 34
+            "width": 77,
+            "height": 22
         }
     }
 }

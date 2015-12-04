@@ -10,14 +10,14 @@ function getParameterByName(name) {
 
 // Local or Remote or URL?
 var path, local, remote, url;
-if(local = getParameterByName("local")){ // note: assignment
+if(local = getParameterByName("local")){ // note: "=" not "=="
     path = "models/"+local+".json";
-}else if(remote = getParameterByName("remote")){ // also: assignment
+}else if(remote = getParameterByName("remote")){ // also: "=" not "=="
     path = Save.baseURL+remote+".json?print=pretty";
-}else if(url = getParameterByName("url")){ // yup: assignment
+}else if(url = getParameterByName("url")){ // yup: "=" not "=="
     path = url;
 }else{
-    path = "models/the_example.json";
+    path = "models/blank.json";
 }
 
 // Load it & make it the model
@@ -43,6 +43,9 @@ reqwest({
             }
         };
         _mustHaveActions(model.states);
+
+        // Show all the UI, whatever.
+        document.body.style.display = "block";
 
         // Now init 'em
 		Model.init(model);

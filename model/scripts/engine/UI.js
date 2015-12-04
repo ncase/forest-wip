@@ -18,17 +18,18 @@ exports.UI = {
 };
 var options = UI.options;
 
-// Save - by default, yes.
-var saveOption = getParameterByName("save");
-if(saveOption=="") options.save=true;
-if(saveOption=="true" || saveOption=="yes") options.save=true;
-if(saveOption=="false" || saveOption=="no") options.save=false;
+// Option Helper
+var _optionHelper = function(property, defaultValue){
+	var option = getParameterByName(property);
+	if(option=="") options[property]=defaultValue;
+	if(option=="true" || option=="yes") options[property]=true;
+	if(option=="false" || option=="no") options[property]=false;
+};
 
-// Auto - by default, yes.
-var autoOption = getParameterByName("auto");
-if(autoOption=="") options.auto=true;
-if(autoOption=="true" || autoOption=="yes") options.auto=true;
-if(autoOption=="false" || autoOption=="no") options.auto=false;
+// Controls, Save, Auto
+_optionHelper("controls",true);
+_optionHelper("save",true);
+_optionHelper("auto",true);
 
 
 /////////////////////////
@@ -241,5 +242,30 @@ subscribe("/meta/reset",function(){
 window.addEventListener("resize",function(){
 	publish("ui/resize");
 },false);
+
+
+/////////////////////////
+///// HIDE IT ALL?? /////
+/////////////////////////
+
+var play_container = document.getElementById("play_container");
+if(!UI.options.controls){
+
+	// Hide editor & player
+	editor_container.style.display = "none";
+	play_container.style.display = "none";
+
+	// CSS: transparent BG, no grid.
+	var css = document.getElementById("ui_style");
+	css.innerHTML = ""+
+	"body{"+
+		"background: none;"+
+	"}"+
+	"#grid_bg, #grid_bg>div>div{"+
+		"border: none;"+
+	"}";
+
+}
+
 
 })(window);

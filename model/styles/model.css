@@ -2,6 +2,7 @@ body{
 	margin:0;
 	overflow: hidden;
 	background: #fff;
+	display: none;
 
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 100;
@@ -270,27 +271,16 @@ THE EDITOR
 }
 
 /***************
-THE GRAPH
-***************/
-/*#graph_container {
-  position: absolute;
-  width: 40%;
-  height: 30%;
-  top: 70%;
-  left: 60%;
-  background: #eee;
-}*/
-
-/***************
 THE PLAY CONTROLS
 ***************/
 
 #play_container{
-	width: 60%;
-	height: 50px;
-	position: absolute;
-	left: 0;
-	bottom: 10px;
+	padding: 10px 0;
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 #play_controls{
 	width: 240px;
