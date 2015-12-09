@@ -20,7 +20,7 @@ b, strong{
 
 	position: relative;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	margin-bottom: 50px;
 
 }
@@ -35,15 +35,15 @@ b, strong{
 	text-align: center;
 	font-family: 'Sniglet';
 
-	text-shadow: 0px 0px 40px black, 0px 0px 40px black, 0px 0px 40px black, 0px 0px 40px black;
+	text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
 
 	pointer-events:none;
 
 }
 .splash > iframe{
 	position: absolute;
-	left:-17px;
-	width: 1400px;
+	left:-25px;
+	width: 1500px;
 	height: 100%;
 	border: none;
 }
@@ -53,6 +53,35 @@ b, strong{
 	width: 600px;
 	margin: 25px auto;
 	line-height: 1.3em;
+}
+
+/** QUESTIONS **/
+.words .reader_input{
+	font-family: Helvetica, Arial, sans-serif;
+	background: #eee;
+	font-size: 20px;
+	font-weight: 100;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color:#333;
+	margin-top:5px;
+}
+.words .reader_choice{
+	overflow: hidden;
+	border-radius: 5px;
+}
+.words .reader_choice label{
+	display: block;
+	width: 100%;
+	padding: 5px;
+	cursor: pointer;
+}
+.words .reader_choice label:nth-child(odd){
+	background: #eee;
+}
+.words .reader_choice label:nth-child(even){
+	background: #ddd;
 }
 
 /** EXAMPLES **/
@@ -66,7 +95,7 @@ b, strong{
 .example div#description, .example div#afterword{
 	font-size: 17px;
 	color: #888;
-	margin: 15px 0;
+	margin: 5px 0 15px 0;
 	line-height: 1.5em;
 }
 .example div#description > div{

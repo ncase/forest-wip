@@ -42,5 +42,68 @@ var onscroll = function(){
 
 window.addEventListener("scroll",onscroll,false);
 setTimeout(onscroll,500);
+setTimeout(onscroll,1000);
+setTimeout(onscroll,1500);
+setTimeout(onscroll,2000);
+
+/***
+
+When an input changes, update all spans that reuse it.
+
+***/
+
+var reader_texts = document.querySelectorAll(".reader_input");
+for(var i=0;i<reader_texts.length;i++){
+	var text = reader_texts[i];
+	var _onInput = (function(t){
+
+		var name = t.getAttribute("name");
+		var selector = ".reader_output[name="+name+"]";
+		var outputs = document.querySelectorAll(selector);
+
+		return function(){
+
+			for(var j=0;j<outputs.length;j++){
+				var output = outputs[j];
+				if(t.value==""){
+					output.innerHTML = output.getAttribute("placeholder");
+				}else{
+					output.innerHTML = t.value;
+				}
+			}
+
+		};
+	})(text);
+	_onInput();
+	text.oninput = text.onchange = _onInput;
+}
+
+/***
+
+When a choice changes, only show its corresponding span.
+
+***/
+
+var reader_choices = document.querySelectorAll(".reader_choice");
+for(var i=0;i<reader_choices.length;i++){
+	var choice = reader_choices[i];
+	var _onSelect = (function(c){
+
+		var name = c.getAttribute("name");
+		var selector = ".reader_reflect[name="+name+"]";
+		var reflections = document.querySelectorAll(selector);
+
+		return function(){
+
+			for(var j=0;j<reflections.length;j++){
+				var reflection = reflections[j];
+				// only show 
+			}
+
+		};
+	})(choice);
+	_onSelect();
+	text.oninput = text.onchange = _onInput;
+}
 
 })();

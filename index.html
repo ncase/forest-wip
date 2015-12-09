@@ -3,30 +3,11 @@
 <head>
 	
 	<!-- Meta -->
-	<title>See the Forest for the Trees</title>
+	<!--title>See the Forest for the Trees</title-->
+	<title>Simulating The World (In Emoji)</title>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<link rel="icon" type="image/png" href="favicon.png">
-
-	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="See the Forest for the Trees">
-	<meta itemprop="description" content="understanding our complex world, with emoji">
-	<meta itemprop="image" content="http://ncase.me/see-the-forest/social/thumbnail.png">
-
-	<!-- Twitter Card data -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@ncasenmare">
-	<meta name="twitter:title" content="See the Forest for the Trees">
-	<meta name="twitter:description" content="understanding our complex world, with emoji">
-	<meta name="twitter:creator" content="@ncasenmare">
-	<meta name="twitter:image" content="http://ncase.me/see-the-forest/social/thumbnail.png">
-
-	<!-- Open Graph data -->
-	<meta property="og:title" content="See the Forest for the Trees">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://ncase.me/neurons">
-	<meta property="og:image" content="http://ncase.me/see-the-forest/social/thumbnail.png">
-	<meta property="og:description" content="understanding our complex world, with emoji">
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
@@ -35,105 +16,345 @@
 <body>
 
 <!-- SPLASH SCREEN -->
-<div class="splash" style="background: hsla(72, 87%, 7%, 1)">
-	<iframe src="model?local=splash/intro&controls=no"></iframe>
-	<div style="font-size:125px; top:80px;">
+<div class="splash" style="background: hsla(72, 87%, 11%, 1);">
+	
+	<iframe src="mode?local=splash/intro&controls=no"></iframe>
+	<div style="width:100%; height:100%; box-shadow: inset 0 0 200px rgba(0,0,0,0.8);"></div>
+
+	<!--div style="font-size:125px; top:130px;">
 		SEE THE FOREST
 	</div>
-	<div style="font-size:90px; top:200px;">
+	<div style="font-size:90px; top:250px;">
 		FOR THE TREES
-	</div>
-	<!--div style="font-family: Helvetica, Arial, sans-serif; top:290px; text-shadow: 0px 0px 15px black, 0px 0px 15px black, 0px 0px 15px black">
-		<div style="width:600px; margin:0 auto;">
-			<div style="float:left">simulate the world, in emoji.</div>
-			<div style="float:right">by nicky case, dec 2015</div>
-		</div>
 	</div-->
+
+	<div style="font-size: 180px;top: 95px;">
+		SIMULATING
+	</div>
+	<div style="font-size: 88px;top: 265px;">
+		THE WORLD
+		(IN EMOJI💩)
+	</div>
+
 </div>
 
 <!-- MAIN ESSAY -->
 <div class="words">
 
 <p>
-meow
+A few years ago, I was hiking alone in the woods.
+The forest was calm, quiet, so of course,
+I got totally bored and checked Twitter.
 </p>
 
 <p>
-meow
+What's new, I wondered?
+Ah, another terrorist attack,
+some financial crisis,
+a GIF that's going viral,
+a virus that's going viral,
+crime, corruption, and environmental collapse...
+so, nothing new.
 </p>
 
 <p>
-meow
+Somewhere in the trees, a bird tweeted.
 </p>
 
 <p>
-meow
+Despair seems to be a common feeling nowadays.
+I know <i>I</i> often feel helpless.
+But recently, I learnt that
+a bunch of scientists, from different fields,
+are finding patterns
+in <i>all</i> the complex systems they study.
+And now, they're creating new ways
+not just to understand the systems of our world,
+but maybe <i>change</i> them as well!
+</p>
+
+<p>
+Tell me, what's an issue in your city/country/planet you care about?
+<br>
+<input type="text" style="width:100%;"
+	name="your_issue" class="reader_input"
+	placeholder="(no seriously, type it in here)"></input>
+</p>
+
+<p>
+There are <i>systems</i> around that problem &mdash;
+social, economic, technological, and/or political systems.
+Today, I'd like to help you understand those systems a bit better,
+find new ways to tackle the problem,
+and <i>create your very own simulation!</i>
+I want to share what I'm still learning about complex systems,
+and to explain it...
+</p>
+
+<p>
+...I'll need to simulate a forest in emoji.
+🌲🌲🌲
 </p>
 
 </div>
 
 <div class="example">
 	<div id="title">
-		<b>A Forest</b> Where Trees Can Only Be Born
+		<b>A Forest</b> Where Trees Pop Outta Nowhere
 	</div>
-	<div id="description">
-		Meow.
-	</div>
-	<iframe src="model?local=growth&save=no" style="height:350px"></iframe>
+	<!--div id="description">
+		In every simulation you'll play with here, you can edit <i>everything</i>.
+		All the rules, all the art, all the words.
+		<br>
+		Try changing how fast trees grow, or change "🌲" to a different emoji!
+	</div-->
+	<iframe src="mode?local=growth&save=no" style="height:450px"></iframe>
 </div>
 
 <div class="words">
 
 <p>
-meow
+Back then,
+I used to live in California,
+which was (and still is) going through a rather nasty drought,
+causing a season of disastrous forest fires.
+Forests are complex ecosystems.
+And as it turns out, wildfires
+&mdash;
+and human squabbles over what to do about them
+&mdash;
+are just part of that system.
+</p>
+
+<!-- EMERGENCE. BOTTOM UP. -->
+
+<p>
+We're going to slowly build up a simulation of that.
+Step by step,
+you'll discover how complex results
+<b>emerge</b> from simple rules,
+from the bottom up.
+You'll learn some counterintuitive things about
+forests, and what they have in common with
+<i>every other system in the world.</i>
+Yes, including
+<span name="your_issue" class="reader_output"
+	placeholder="<b>[what! you didn't tell me what issue you care about! whaaat!]</b>"></span>.
 </p>
 
 <p>
-meow
+Let's add two new rules to this simulation.
 </p>
 
 <p>
-meow
+All trees have a small chance of getting hit by lightning,
+and catching on fire.
+(🌲&rarr;🔥)
+Also, any tree next to fire also catches on fire.
+(🔥🌲&rarr;🔥🔥)
+These new rules <i>decrease</i> trees, so
+what do you think happens now, when you <i>increase</i> tree growth?
+</p>
+
+<form name="predict_fire" class="reader_choice">
+<label>
+	<input type="radio" name="prediction" value="more" checked>
+	🌲📈&rarr;🌲📈: More trees lead to more trees.
+</label>
+<label>
+	<input type="radio" name="prediction" value="less">
+	🌲📈&rarr;🌲📉: More trees lead to fewer trees.
+</label>
+<label>
+	<input type="radio" name="prediction" value="none">
+	Neither.
+</label>
+<label>
+	<input type="radio" name="prediction" value="both">
+	Both... somehow.
+</label>
+</form>
+
 </p>
 
 <p>
-meow
+Don't worry, this question isn't to judge you,
+it's only for <i>you</i> to express your prediction!
+Now, let's find out what happens...
 </p>
 
 </div>
 
 <div class="example">
 	<div id="title">
-		<b>A Forest</b> Where Trees Can Be Born &amp; Be Burn...ed
+		<b>A Forest</b> Where Trees Get Born &amp; Get Burn...ed
 	</div>
-	<div id="description">
+	<!--div id="description">
 		Meow
+	</div-->
+	<iframe src="mode?local=forest&save=no"></iframe>
+</div>
+
+<div class="words">
+
+<!--
+
+Here's the format:
+1. reflect on prediction
+2. new framework idea
+3. apply new idea
+4. new rules, set up expectations for failure
+5. make a prediction
+
+-->
+
+<p name="predict_fire" class="reader_reflect">
+
+<span value="more">
+You predicted that more trees would lead to more trees,
+and that's a totally reasonable prediction!
+However, in this case, intuition fails.
+More is not more.
+Here, more is <i>less</i>.
+This counterintuitive result is because
+more trees &rarr;
+thicker forest &rarr;
+fire can spread further &rarr;
+fewer trees.
+(And afterwards,
+fewer trees &rarr;
+fire can't spread as far &rarr;
+trees can grow back &rarr;
+the cycle repeats)
+</span>
+
+<!--span value="less">
+You predicted that more trees would lead to <i>less</i> trees.
+Clever! However, it only came half-true.
+I assume you figured out that
+more trees &rarr;
+thicker forest &rarr;
+fire can spread further &rarr;
+fewer trees.
+But this logic goes further:
+fewer trees &rarr;
+fire can't spread as far &rarr;
+trees can grow back &rarr;
+the cycle repeats,
+and the higher the growth rate,
+the more extreme the cycle is.
+</span-->
+
+<!--span value="none">
+Hah, you must've thought I was giving you a trick question.
+Well, I mean, I was.
+Anyway, 
+</span-->
+
+<!--span value="both">
+poo
+</span-->
+
+</p>
+
+<p>
+[your prediction]
+</p>
+
+<p>
+[word: FEEDBACK LOOPS]
+[example: ???]
+</p>
+
+<p>
+[predict: trees AND fire in response to bear, or Something Else Entirely]
+</p>
+
+<p>
+<!-- Smokey Bear overwhelmed with despair, snaps, and starts killing trees. -->
+BEAR WITH ME for a moment.
+</p>
+
+</div>
+
+<div class="example">
+	<div id="title">
+		<b>A Forest</b> Where Only YOU Can Prevent Forest Fires
 	</div>
-	<iframe src="model?local=forest&save=no"></iframe>
+	<!--div id="description">
+		Meow
+	</div-->
+	<iframe src="mode?local=forest&save=no"></iframe>
 </div>
 
 <div class="words">
 
 <p>
-meow
+[your prediction]
 </p>
 
 <p>
-meow
+[word: ___ nothing? ___]
+[apply: ]
+[example: ???]
 </p>
 
 <p>
-meow
+<!-- not an ecosystem without multiple plants -->
 </p>
 
 <p>
-meow
+[predict: without you, which will dominate?]
+</p>
+
+<p>
+[predict: with you, which will dominate?]
 </p>
 
 </div>
 
-<div class="fancy_header">
-(end of part one!)
+<div class="example">
+	<div id="title">
+		<b>A Forest</b> Where Only YOU Can Prevent Forest Fires
+	</div>
+	<!--div id="description">
+		Meow
+	</div-->
+	<iframe src="mode?local=forest&save=no"></iframe>
+</div>
+
+<div class="words">
+
+<p>
+[your prediction for WITHOUT you]
+</p>
+
+<p>
+[word: SELF-ORGANIZATION]
+[example: ???]
+</p>
+
+<p>
+[your prediction for WITH you]
+</p>
+
+<p>
+
+</p>
+
+
+<p>
+<!-- not an ecosystem without multiple plants -->
+</p>
+
+<p>
+[predict: without you, which will dominate?]
+</p>
+
+<p>
+[predict: with you, which will dominate?]
+</p>
+
 </div>
 
 <div class="words">
