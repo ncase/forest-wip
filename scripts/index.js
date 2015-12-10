@@ -1,4 +1,4 @@
-(function(){
+window.addEventListener("load",function(){
 
 /***
 
@@ -85,25 +85,54 @@ When a choice changes, only show its corresponding span.
 ***/
 
 var reader_choices = document.querySelectorAll(".reader_choice");
+
+// FOR EACH CHOICE...
 for(var i=0;i<reader_choices.length;i++){
+
 	var choice = reader_choices[i];
+
+	// When you make a selection...
 	var _onSelect = (function(c){
 
+		// Get ALL the Reflections affected by it.
 		var name = c.getAttribute("name");
 		var selector = ".reader_reflect[name="+name+"]";
 		var reflections = document.querySelectorAll(selector);
 
-		return function(){
+		return function(event){
 
+			// This choice's value
+			var value = this.value;
+
+			// For each Reflection
 			for(var j=0;j<reflections.length;j++){
+
 				var reflection = reflections[j];
-				// only show 
+				var children = reflection.children;
+
+				// Hide every response, EXCEPT for the one
+				for(var k=0;k<children.length;k++){
+					var child = children[k];
+					var isResponse = (child.getAttribute("value")==value);
+					child.style.display = isResponse ? "inline" : "none";
+				}
+
 			}
 
 		};
+
 	})(choice);
-	_onSelect();
-	text.oninput = text.onchange = _onInput;
+
+	// Do it for the currently selected one
+	var selected = choice.querySelector("input[type=radio][checked]");
+	_onSelect.call(selected);
+
+	// APPLY IT TO ALL THE RADIO BUTTONS
+	var radios = choice.querySelectorAll("input[type=radio]");
+	Array.prototype.forEach.call(radios, function(radio){
+		radio.addEventListener('change', _onSelect);
+	});
+
 }
 
-})();
+},false);

@@ -76,7 +76,7 @@ but maybe <i>change</i> them as well!
 <p>
 Tell me, what's an issue in your city/country/planet you care about?
 <br>
-<input type="text" style="width:100%;"
+<input type="text"
 	name="your_issue" class="reader_input"
 	placeholder="(no seriously, type it in here)"></input>
 </p>
@@ -129,14 +129,17 @@ are just part of that system.
 <!-- EMERGENCE. BOTTOM UP. -->
 
 <p>
-We're going to slowly build up a simulation of that.
+We're going to simulate that.
 Step by step,
-you'll discover how complex results
-<b>emerge</b> from simple rules,
+you'll discover how simple rules lead to complex results,
+<b>emergence</b>
 from the bottom up.
-You'll learn some counterintuitive things about
+You'll learn counterintuitive things about
 forests, and what they have in common with
 <i>every other system in the world.</i>
+</p>
+
+<p>
 Yes, including
 <span name="your_issue" class="reader_output"
 	placeholder="<b>[what! you didn't tell me what issue you care about! whaaat!]</b>"></span>.
@@ -201,10 +204,8 @@ Now, let's find out what happens...
 
 Here's the format:
 1. reflect on prediction
-2. new framework idea
-3. apply new idea
-4. new rules, set up expectations for failure
-5. make a prediction
+2. new idea
+3. apply idea // prediction or freeform text.
 
 -->
 
@@ -228,9 +229,9 @@ trees can grow back &rarr;
 the cycle repeats)
 </span>
 
-<!--span value="less">
-You predicted that more trees would lead to <i>less</i> trees.
-Clever! However, it only came half-true.
+<span value="less">
+You said that more trees would lead to <i>fewer</i> trees.
+Clever! However, your prediction only came half-true.
 I assume you figured out that
 more trees &rarr;
 thicker forest &rarr;
@@ -243,36 +244,95 @@ trees can grow back &rarr;
 the cycle repeats,
 and the higher the growth rate,
 the more extreme the cycle is.
-</span-->
+</span>
 
-<!--span value="none">
-Hah, you must've thought I was giving you a trick question.
+<span value="none">
+You predicted that more trees would lead to...
+neither more trees nor fewer trees.
+Heh, you must've thought I was giving you a trick question.
 Well, I mean, I was.
-Anyway, 
-</span-->
+Anyway, it turns out increasing the growth rate
+would create a cycle of more <i>and</i> less trees.
+More trees &rarr;
+thicker forest &rarr;
+fire spreads further &rarr;
+fewer trees &rarr;
+fire spreads less &rarr;
+more trees grow back &rarr;
+repeat cycle.
+</span>
 
-<!--span value="both">
-poo
-</span-->
+<span value="both">
+You predicted that more trees would lead to...
+both more <i>and</i> less trees?
+That makes no sense.
+And yet, you're totally right!
+Increasing the growth rate
+creates a cycle of more <i>and</i> less trees.
+More trees &rarr;
+thicker forest &rarr;
+fire spreads further &rarr;
+fewer trees &rarr;
+fire spreads less &rarr;
+more trees grow back &rarr;
+the cycle repeats,
+and the higher the growth rate,
+the more extreme the cycle is.
+</span>
 
 </p>
 
 <p>
-[your prediction]
+Simple rules to complex results, <i>from the bottom up.</i>
 </p>
 
 <p>
-[word: FEEDBACK LOOPS]
-[example: ???]
+🌲📈&rarr;🔥📈&rarr;🌲📉&rarr;🔥📉&rarr;🌲📈⟲
 </p>
 
 <p>
-[predict: trees AND fire in response to bear, or Something Else Entirely]
+We're so used to thinking in linear cause-and-effect,
+A-affects-B.
+But the world's filled
+with what scientists call <b>feedback loops</b>,
+where A-affects-B-affects-A-affects-B, to infinity.
+There's two kinds of feedback loops:
+<b>reinforcing loops</b>,
+like fire making more fire,
+and
+<b>balancing loops</b>,
+like the above burn-grow cycle.
 </p>
 
 <p>
-<!-- Smokey Bear overwhelmed with despair, snaps, and starts killing trees. -->
-BEAR WITH ME for a moment.
+Loops are a new way to look at the world,
+through <i>systems</i>.
+Think about <span name="your_issue" class="reader_output"
+	placeholder="<b>[WHAT THING DO YOU CARE ABOUT]</b>"></span> again.
+Can you find reinforcing loops behind it?
+<br>
+<textarea style="font-size:16px; height:70px;"
+	name="reinforcing_loop" class="reader_input"
+	placeholder="e.g. an arms race (oh no), an invention that leads to more inventions (oh yes)"></textarea>
+</p>
+
+<p>
+What about balancing loops?
+<br>
+<!-- NEED A BETTER EXAMPLE -->
+<textarea style="font-size:16px; height:70px;"
+	name="balancing_loop" class="reader_input"
+	placeholder="e.g. if something's too expensive, people will want it less, and so the price drops."></textarea>
+</p>
+</p>
+
+<p>
+You just did the first important step:
+to move out of linear thinking, and see in <i>systems.</i>
+Now, how do we change those systems?
+Since our forest is just a simulation, we can try out all kinds of wacky ideas,
+like what if Smokey The Bear finally loses it and starts killing trees?
+So, if you'll <i>bear</i> with me for a moment...
 </p>
 
 </div>
@@ -290,32 +350,101 @@ BEAR WITH ME for a moment.
 <div class="words">
 
 <p>
-[your prediction]
+Yup.
+You made a thicker forest with more trees...
+by <i>deliberately killing</i> trees.
+This happens because, by removing trees,
+you <i>break</i> the reinforcing loop of
+fire catching its neighbors on fire.
+That's how you change a system,
+not by fiddling with numbers,
+but <i>changing the feedback loops</i>.
 </p>
 
 <p>
-[word: ___ nothing? ___]
-[apply: ]
-[example: ???]
+Okay. At this point, you might be thinking I'm full of 💩.
+It's not like forest firefighters
+go out and kill trees,
+except... that's exactly what they do!
+If you've ever heard the phrase
+“fight fire with fire”,
+that comes from the practice of
+doing controlled burns,
+to get rid of flammable material
+before a wildfire can spread through it.
 </p>
 
 <p>
-<!-- not an ecosystem without multiple plants -->
+Let's kill some trees again, 
+but first:
+a forest wouldn't be an ecosystem with just one plant type.
+So, here are two species:
 </p>
 
 <p>
-[predict: without you, which will dominate?]
+🌳 <b>Strong Tree:</b>
+invincible to fire, but if four or more of its neighbors are Jerk Weeds,
+it'll be choked of nutrients and die.
 </p>
 
 <p>
-[predict: with you, which will dominate?]
+🌱 <b>Jerk Weed:</b>
+flammable &amp; grows twice as fast as Strong Trees.
 </p>
+
+<p>
+First, make a prediction.
+<i>Without</i> your walls of bears, how will the plants interact?
+</p>
+
+<form name="predict_species_1" class="reader_choice">
+<label>
+	<input type="radio" name="prediction" value="tree" checked>
+	🌳&gt;🌱: Strong Trees will beat out the Jerk Weeds.
+</label>
+<label>
+	<input type="radio" name="prediction" value="weed">
+	🌳&lt;🌱: Strong Trees will be overrun by Jerk Weeds.
+</label>
+<label>
+	<input type="radio" name="prediction" value="same">
+	🌳=🌱: Strong Trees and Jerk Weeds will be somewhat equal.
+</label>
+<label>
+	<input type="radio" name="prediction" value="what">
+	Something completely different.
+</label>
+</form>
+
+<p>
+Then predict: <i>with</i> your walls,
+how will the plants interact now?
+</p>
+
+<form name="predict_species_2" class="reader_choice">
+<label>
+	<input type="radio" name="prediction" value="tree" checked>
+	🌳&gt;🌱: Strong Trees will beat out the Jerk Weeds.
+</label>
+<label>
+	<input type="radio" name="prediction" value="weed">
+	🌳&lt;🌱: Strong Trees will be overrun by Jerk Weeds.
+</label>
+<label>
+	<input type="radio" name="prediction" value="same">
+	🌳=🌱: Strong Trees and Jerk Weeds will be somewhat equal.
+</label>
+<label>
+	<input type="radio" name="prediction" value="what">
+	Something completely different.
+</label>
+</form>
 
 </div>
 
 <div class="example">
 	<div id="title">
-		<b>A Forest</b> Where Only YOU Can Prevent Forest Fires
+		<b>A Forest</b> Where Some Plants Are Jerks
 	</div>
 	<!--div id="description">
 		Meow
@@ -327,34 +456,37 @@ BEAR WITH ME for a moment.
 
 <p>
 [your prediction for WITHOUT you]
+<br>
+Simulations to do what the human head can't.
 </p>
 
 <p>
-[word: SELF-ORGANIZATION]
-[example: ???]
+[word: SELF-ORGANIZATION. From the bottom up. Schools of fish, etc.]
 </p>
 
 <p>
 [your prediction for WITH you]
+<br>
+THIS IS AN ACTUAL PROBLEM FOREST FIREFIGHTERS FACE.
+<br>
+Tradeoffs in policy, through simulation and modeling.
 </p>
 
 <p>
-
+[So far, just playing WITHIN Sim, now play WITH sim. 
+We're getting close to you being able to MAKE YOUR OWN SIM OF _X_.
+Get practice creating solutions,
+and understanding what loops you'd be breaking,
+or changing, how it ripples through the system.]
 </p>
 
+</div>
 
-<p>
-<!-- not an ecosystem without multiple plants -->
-</p>
-
-<p>
-[predict: without you, which will dominate?]
-</p>
-
-<p>
-[predict: with you, which will dominate?]
-</p>
-
+<div class="example">
+	<div id="title">
+		<b>A Forest</b> Where Someone Put You In Charge, Good Luck
+	</div>
+	<iframe src="mode?local=forest&save=no"></iframe>
 </div>
 
 <div class="words">
@@ -368,6 +500,58 @@ meow
 </p>
 
 </div>
+
+<!-- DIVERSE EXAMPLES -->
+<div class="example">
+	<iframe src="mode?local=forest&save=no"></iframe>
+</div>
+
+<div class="words">
+
+<p>
+meow
+</p>
+
+<p>
+meow
+</p>
+
+<!-- THE BIG DAMN SANDBOX -->
+<div class="example">
+	<iframe src="mode?local=forest&save=no"></iframe>
+</div>
+
+<div class="words">
+
+<p>
+meow
+</p>
+
+<p>
+meow
+</p>
+
+
+</div>
+
+<!--
+
+NEXT UP:
+
+- create your own solutions!
+- a bunch of diverse examples, apply what you've learnt again. // also, some FUN examples.
+- A form to reflect on everything you've written // local interactions FIRST.
+- THE SANDBOX
+- Hype-kill. Some thoughts tying together everything, From The Bottom Up.
+- PD & Patreon: From the Bottom Up
+- Thanks & Further Reading, Press and Stuff.
+
+// Save If It Starts Paused...
+// If you could take snapshots
+// and have directional movement & detection
+// the simulations could be a LOT more powerful.
+
+-->
 
 </body>
 </html>

@@ -57,6 +57,7 @@ b, strong{
 
 /** QUESTIONS **/
 .words .reader_input{
+	width: 100%;
 	font-family: Helvetica, Arial, sans-serif;
 	background: #eee;
 	font-size: 20px;
@@ -82,6 +83,9 @@ b, strong{
 }
 .words .reader_choice label:nth-child(even){
 	background: #ddd;
+}
+.words .reader_reflect span:nth-child(n+2){
+	display: none;
 }
 
 /** EXAMPLES **/
