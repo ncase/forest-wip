@@ -18,7 +18,7 @@
 <!-- SPLASH SCREEN -->
 <div class="splash" style="background: hsla(72, 87%, 11%, 1);">
 	
-	<iframe src="mode?local=splash/intro&controls=no"></iframe>
+	<iframe src="model?local=splash/intro&controls=no"></iframe>
 	<div style="width:100%; height:100%; box-shadow: inset 0 0 200px rgba(0,0,0,0.8);"></div>
 
 	<!--div style="font-size:125px; top:130px;">
@@ -33,7 +33,7 @@
 	</div>
 	<div style="font-size: 88px;top: 265px;">
 		THE WORLD
-		(IN EMOJI💩)
+		(IN EMOJI😘)
 	</div>
 
 </div>
@@ -42,39 +42,41 @@
 <div class="words">
 
 <p>
-A few years ago, I was hiking alone in the woods.
-The forest was calm, quiet, so of course,
-I got totally bored and checked Twitter.
+A few years ago, I was hiking alone in the woods,
+somewhere in Santa Cruz, California.
+The forest was calm, quiet, peaceful, so of course,
+I got frikkin' bored and decided to check Twitter.
 </p>
 
 <p>
-What's new, I wondered?
-Ah, another terrorist attack,
+What's new, I asked?
+Ah, another tragic shooting,
 some financial crisis,
 a GIF that's going viral,
 a virus that's going viral,
 crime, corruption, and environmental collapse...
-so, nothing new.
+so, nothing new, then.
 </p>
 
 <p>
-Somewhere in the trees, a bird tweeted.
+Somewhere in the trees, a bird also tweeted.
 </p>
 
 <p>
 Despair seems to be a common feeling nowadays.
 I know <i>I</i> often feel helpless.
 But recently, I learnt that
-a bunch of scientists, from different fields,
-are finding patterns
+a bunch of
+scientists from different fields got together,
+and found patterns
 in <i>all</i> the complex systems they study.
-And now, they're creating new ways
-not just to understand the systems of our world,
-but maybe <i>change</i> them as well!
+Now, they're creating new ways
+not only to understand the systems of our world,
+but change them as well!
 </p>
 
 <p>
-Tell me, what's an issue in your city/country/planet you care about?
+Tell me, what's an issue in your city/country/planet <i>you</i> care about?
 <br>
 <input type="text"
 	name="your_issue" class="reader_input"
@@ -85,7 +87,7 @@ Tell me, what's an issue in your city/country/planet you care about?
 There are <i>systems</i> around that problem &mdash;
 social, economic, technological, and/or political systems.
 Today, I'd like to help you understand those systems a bit better,
-find new ways to tackle the problem,
+find new ways to tackle that problem,
 and <i>create your very own simulation!</i>
 I want to share what I'm still learning about complex systems,
 and to explain it...
@@ -102,39 +104,30 @@ and to explain it...
 	<div id="title">
 		<b>A Forest</b> Where Trees Pop Outta Nowhere
 	</div>
-	<!--div id="description">
-		In every simulation you'll play with here, you can edit <i>everything</i>.
-		All the rules, all the art, all the words.
-		<br>
-		Try changing how fast trees grow, or change "🌲" to a different emoji!
-	</div-->
-	<iframe src="mode?local=growth&save=no" style="height:450px"></iframe>
+	<iframe src="model?local=growth&save=no" style="height:450px"></iframe>
 </div>
 
 <div class="words">
 
 <p>
-Back then,
 I used to live in California,
-which was (and still is) going through a rather nasty drought,
+which was (still is) going through a nasty drought,
 causing a season of disastrous forest fires.
 Forests are complex ecosystems.
-And as it turns out, wildfires
-&mdash;
-and human squabbles over what to do about them
-&mdash;
+And as it turns out, wildfires,
+and human squabbles over what to do about them,
 are just part of that system.
 </p>
-
-<!-- EMERGENCE. BOTTOM UP. -->
 
 <p>
 We're going to simulate that.
 Step by step,
 you'll discover how simple rules lead to complex results,
-<b>emergence</b>
 from the bottom up.
-You'll learn counterintuitive things about
+<!--<b>“Emergence”</b>,
+as it's called.-->
+Along the way,
+you'll learn some counterintuitive things about
 forests, and what they have in common with
 <i>every other system in the world.</i>
 </p>
@@ -147,15 +140,11 @@ Yes, including
 
 <p>
 Let's add two new rules to this simulation.
-</p>
-
-<p>
-All trees have a small chance of getting hit by lightning,
-and catching on fire.
+Trees can get hit by lightning and catch on fire.
 (🌲&rarr;🔥)
 Also, any tree next to fire also catches on fire.
 (🔥🌲&rarr;🔥🔥)
-These new rules <i>decrease</i> trees, so
+These new rules <i>decrease</i> trees;
 what do you think happens now, when you <i>increase</i> tree growth?
 </p>
 
@@ -195,7 +184,7 @@ Now, let's find out what happens...
 	<!--div id="description">
 		Meow
 	</div-->
-	<iframe src="mode?local=forest&save=no"></iframe>
+	<iframe src="model?local=forest&save=no"></iframe>
 </div>
 
 <div class="words">
@@ -305,34 +294,32 @@ like the above burn-grow cycle.
 </p>
 
 <p>
-Loops are a new way to look at the world,
-through <i>systems</i>.
+Loops are a new way to look at the world.
 Think about <span name="your_issue" class="reader_output"
-	placeholder="<b>[WHAT THING DO YOU CARE ABOUT]</b>"></span> again.
-Can you find reinforcing loops behind it?
+	placeholder="<b>[please i'm begging you, tell me what big issue you care about]</b>"></span> again.
+What reinforcing loops do you think affect it?
 <br>
 <textarea style="font-size:16px; height:70px;"
 	name="reinforcing_loop" class="reader_input"
-	placeholder="e.g. an arms race (oh no), an invention that leads to more inventions (oh yes)"></textarea>
+	placeholder="e.g. an arms race: we get some bombs, so they get more bombs in response, so we get even *more* bombs in response, oh shiiiii--"></textarea>
 </p>
 
 <p>
-What about balancing loops?
+Now, what about balancing loops?
 <br>
-<!-- NEED A BETTER EXAMPLE -->
 <textarea style="font-size:16px; height:70px;"
 	name="balancing_loop" class="reader_input"
-	placeholder="e.g. if something's too expensive, people will want it less, and so the price drops."></textarea>
+	placeholder="e.g. supply & demand: if the price is too low, lots of people will want to buy it, which will drive the price back up, oh shiiiii--"></textarea>
 </p>
 </p>
 
 <p>
-You just did the first important step:
-to move out of linear thinking, and see in <i>systems.</i>
-Now, how do we change those systems?
-Since our forest is just a simulation, we can try out all kinds of wacky ideas,
-like what if Smokey The Bear finally loses it and starts killing trees?
-So, if you'll <i>bear</i> with me for a moment...
+You just did the most important step:
+to move beyond the linear mindset, and think in <i>systems.</i>
+But now, how do we change those systems?
+Since our forest is just a simulation, we can try out wacky ideas,
+like what if Smokey The Bear finally loses his marbles and starts killing trees?
+If you'll <i>bear</i> with me for a moment...
 </p>
 
 </div>
@@ -341,23 +328,20 @@ So, if you'll <i>bear</i> with me for a moment...
 	<div id="title">
 		<b>A Forest</b> Where Only YOU Can Prevent Forest Fires
 	</div>
-	<!--div id="description">
-		Meow
-	</div-->
-	<iframe src="mode?local=forest&save=no"></iframe>
+	<iframe src="model?local=firebreak&save=no"></iframe>
 </div>
 
 <div class="words">
 
 <p>
 Yup.
-You made a thicker forest with more trees...
-by <i>deliberately killing</i> trees.
-This happens because, by removing trees,
-you <i>break</i> the reinforcing loop of
+You made a forest thicker...
+by deliberately killing trees.
+This is because by removing trees,
+you break the reinforcing loop of
 fire catching its neighbors on fire.
-That's how you change a system,
-not by fiddling with numbers,
+<i>That's</i> how you change a system.
+Not by fiddling with numbers,
 but <i>changing the feedback loops</i>.
 </p>
 
@@ -375,10 +359,10 @@ before a wildfire can spread through it.
 </p>
 
 <p>
-Let's kill some trees again, 
-but first:
+Let's kill some trees again.
+But first &mdash;
 a forest wouldn't be an ecosystem with just one plant type.
-So, here are two species:
+So, let's have two species:
 </p>
 
 <p>
@@ -394,7 +378,7 @@ flammable &amp; grows twice as fast as Strong Trees.
 
 <p>
 First, make a prediction.
-<i>Without</i> your walls of bears, how will the plants interact?
+<i>Without</i> your walls of fire-containing bears, how will the plants interact?
 </p>
 
 <form name="predict_species_1" class="reader_choice">
@@ -440,19 +424,44 @@ how will the plants interact now?
 </label>
 </form>
 
+<p>
+And here we go again...
+</p>
+
 </div>
 
 <div class="example">
 	<div id="title">
 		<b>A Forest</b> Where Some Plants Are Jerks
 	</div>
-	<!--div id="description">
-		Meow
-	</div-->
-	<iframe src="mode?local=forest&save=no"></iframe>
+	<iframe src="model?local=invasive&save=no"></iframe>
 </div>
 
 <div class="words">
+
+<p>
+HA HA THAT'S MY ENTIRE DRAFT SO FAR, I'M SUCH A TEASE.
+</p>
+
+<p>
+Anyway yeah let me know what your thoughts are so far!
+Is this playable post <i>actually</i> getting you to think about
+<span name="your_issue" class="reader_output"
+	placeholder="<b>[why must you hurt me in this way]</b>"></span>
+in a new way, through systems?
+Or are you just kinda skipping over those.
+What parts bore you, or seem irrelevant or too weird?
+How's the whole flow of the piece, is it too text-heavy?
+</p>
+
+<p>
+Honest feedback is best.
+And again, thank you so so much! 😘
+</p>
+
+</div>
+
+<!--
 
 <p>
 [your prediction for WITHOUT you]
@@ -501,7 +510,7 @@ meow
 
 </div>
 
-<!-- DIVERSE EXAMPLES -->
+<!-- DIVERSE EXAMPLES ->
 <div class="example">
 	<iframe src="mode?local=forest&save=no"></iframe>
 </div>
@@ -516,7 +525,7 @@ meow
 meow
 </p>
 
-<!-- THE BIG DAMN SANDBOX -->
+<!-- THE BIG DAMN SANDBOX ->
 <div class="example">
 	<iframe src="mode?local=forest&save=no"></iframe>
 </div>
