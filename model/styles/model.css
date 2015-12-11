@@ -345,10 +345,10 @@ THE PLAY CONTROLS
 #play_controls > #play_step{
 	width:40px;
 }
-#play_controls > #draw_icon{
+#play_controls > #play_draw{
 	width:80px;
 }
-#play_controls > #draw_icon > div{
+#play_controls > #play_draw > div{
 	float: right;
     width: 30px;
     height: 30px;

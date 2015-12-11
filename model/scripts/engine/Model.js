@@ -84,7 +84,7 @@ as well as serialize & deserialize.
 	setInterval(Model.tick,1000/30); // 30 FPS, watchu gonna do about it
 
 	// Helper Functions
-	Model.getStateFromID = function(id){
+	Model.getStateByID = function(id){
 		for(var i=0;i<Model.data.states.length;i++){
 			var state = Model.data.states[i];
 			if(state.id==id) return state;

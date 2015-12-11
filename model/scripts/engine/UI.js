@@ -73,8 +73,45 @@ play_step.onclick = function(){
 };
 
 /////////////////////////
-///// TOGGLE STATES /////
+///// CHANGE STATES /////
 /////////////////////////
+
+// Toggle brush
+var play_draw = document.getElementById("play_draw");
+var play_draw_icon = document.querySelector("#play_draw > div");
+play_draw.onclick = function(){
+	
+	// Get what the next state should be
+	var state = Model.getStateByID(Model.data.meta.draw);
+	var stateIndex = Model.data.states.indexOf(state);
+	var nextIndex = (stateIndex+1)%Model.data.states.length;
+	var nextState = Model.data.states[nextIndex];
+	Model.data.meta.draw = nextState.id;
+
+	// Update brush icon
+	_updateBrushIcon();
+
+};
+var _updateBrushIcon = function(){
+	var state = Model.getStateByID(Model.data.meta.draw);
+	play_draw_icon.innerHTML = state.icon;
+};
+
+// The default brush
+subscribe("/model/init",function(){
+	_updateBrushIcon();
+});
+
+// when state header icon is changed
+subscribe("/ui/updateStateHeaders",_updateBrushIcon);
+
+// when state is deleted
+subscribe("/ui/removeState",function(deleted_id){
+	if(Model.data.meta.draw==deleted_id){
+		Model.data.meta.draw = 0;
+		_updateBrushIcon();
+	}
+});
 
 // Mouse down
 var Mouse = { x:0, y:0, pressed:false };
@@ -127,14 +164,8 @@ var changeCell = function(){
 	// Get the agent there
 	var agent = Grid.array[y][x];
 
-	// Get what the next state should be
-	var state = Model.getStateFromID(agent.stateID);
-	var stateIndex = Model.data.states.indexOf(state);
-	var nextIndex = (stateIndex+1)%Model.data.states.length;
-	var nextState = Model.data.states[nextIndex];
-
-	// Swap agent to that state
-	agent.forceState(nextState.id);
+	// Swap agent to brush state
+	agent.forceState(Model.data.meta.draw);
 
 	// Update the rendering
 	publish("/grid/updateAgents");

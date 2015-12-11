@@ -595,7 +595,7 @@ Editor.createProportions = function(){
 
 			// Create Icon
 			var iconDOM = document.createElement("span");
-			iconDOM.innerHTML = Model.getStateFromID(stateID).icon;
+			iconDOM.innerHTML = Model.getStateByID(stateID).icon;
 			lineDOM.appendChild(iconDOM);
 
 			// Create Slider

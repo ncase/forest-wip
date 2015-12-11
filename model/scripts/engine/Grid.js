@@ -98,7 +98,7 @@ subscribe("/ui/updateStateHeaders",function(){
 	for(var y=0;y<Grid.array.length;y++){
 		for(var x=0;x<Grid.array[0].length;x++){
 			var agent = Grid.array[y][x];
-			if(!Model.getStateFromID(agent.stateID)){
+			if(!Model.getStateByID(agent.stateID)){
 				agent.forceState(0); // state's gone, force delete it.
 			}
 		}
@@ -167,7 +167,7 @@ Grid.updateAgents = function(){
 		html += "<div>";
 		for(var x=0;x<Grid.array[0].length;x++){
 			var agent = Grid.array[y][x];
-			var icon = Model.getStateFromID(agent.stateID).icon;
+			var icon = Model.getStateByID(agent.stateID).icon;
 			html += "<div>"+icon+"</div>";
 		}
 		html += "</div>";
