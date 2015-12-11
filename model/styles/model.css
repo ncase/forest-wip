@@ -92,6 +92,10 @@ THE EDITOR
     overflow: hidden;
     
 }
+#editor .editor_textarea{
+    background: #ccc;
+    padding: 10px;
+}
 #editor .editor_state > textarea{
 	background: #ccc;
 	color: #666;

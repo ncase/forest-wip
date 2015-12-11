@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "description": "The growth rate starts at 0.2%.\nWhat happens when you increase it to 0.5%? 1%? 5%? \n\n(Or in the other direction, what happens when the growth rate is 0.1%? Or 0%?)\n\nFeel free to mess around afterwards! Add some animals that move around... Change how often lightning strikes trees... Change how often lightning strikes animals... y'know, whatever you want!"
+    },
     "states": [
         {
             "id": 0,
@@ -7,7 +10,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 1,
+                    "probability": 0.002,
                     "actions": [
                         {
                             "type": "go_to_state",
@@ -16,13 +19,25 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "description": "Blank spots grow trees. (again, adjust the growth rate below!)"
         },
         {
             "id": 1,
-            "icon": "🔥",
+            "icon": "🌲",
             "name": "tree",
             "actions": [
+                {
+                    "type": "if_random",
+                    "probability": 0.0001,
+                    "actions": [
+                        {
+                            "type": "go_to_state",
+                            "stateID": 2,
+                            "actions": []
+                        }
+                    ]
+                },
                 {
                     "type": "if_neighbor",
                     "sign": ">=",
@@ -36,41 +51,43 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "description": "Has a small chance of getting hit by lightning & catching on fire. Also, if any neighbors are on fire, it also catches on fire."
         },
         {
             "id": 2,
-            "icon": "✨",
+            "icon": "🔥",
             "name": "fire",
             "actions": [
                 {
-                    "type": "go_to_state",
                     "stateID": 0,
+                    "type": "go_to_state",
                     "actions": []
                 }
-            ]
+            ],
+            "description": "Burns away in one turn."
         }
     ],
     "world": {
         "update": "simultaneous",
-        "neighborhood": "neumann",
+        "neighborhood": "moore",
         "proportions": [
             {
                 "stateID": 0,
-                "parts": 94
+                "parts": 100
             },
             {
                 "stateID": 1,
-                "parts": 3
+                "parts": 0
             },
             {
                 "stateID": 2,
-                "parts": 3
+                "parts": 0
             }
         ],
         "size": {
-            "width": 50,
-            "height": 50
+            "width": 40,
+            "height": 34
         }
     }
 }

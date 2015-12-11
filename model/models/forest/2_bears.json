@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "meow"
+        "description": "Any tree next to a bear gets killed. 🐻🌲➡🐻◽️\n\n1. CLICK & DRAG across the grid to draw walls of bears!\n\n2. DIVIDE THE GRID into about 10 small sections. (The sections don't have to be even, but make sure there's no huge gaps.)\n\n3. PRESS \"PLAY\".\n\nWhat do you notice? How do the trees/fires act now? (And again, feel free to explore!)"
     },
     "states": [
         {
@@ -10,7 +10,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 0.002,
+                    "probability": 0.005,
                     "actions": [
                         {
                             "type": "go_to_state",
@@ -19,7 +19,15 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "description": "Blank spots grow trees."
+        },
+        {
+            "id": 4,
+            "icon": "🐻",
+            "name": "bear",
+            "actions": [],
+            "description": "I HATE TREES. RAWR."
         },
         {
             "id": 1,
@@ -49,8 +57,22 @@
                             "actions": []
                         }
                     ]
+                },
+                {
+                    "sign": ">=",
+                    "num": 1,
+                    "stateID": "4",
+                    "actions": [
+                        {
+                            "stateID": 0,
+                            "type": "go_to_state",
+                            "actions": []
+                        }
+                    ],
+                    "type": "if_neighbor"
                 }
-            ]
+            ],
+            "description": "Can get hit by lightning. Catches on fire if a neighbor's on fire. Gets killed if next to a bear."
         },
         {
             "id": 2,
@@ -62,7 +84,8 @@
                     "stateID": 0,
                     "actions": []
                 }
-            ]
+            ],
+            "description": "Burns away in one turn."
         }
     ],
     "world": {
@@ -71,11 +94,15 @@
         "proportions": [
             {
                 "stateID": 0,
-                "parts": 100
+                "parts": 98
+            },
+            {
+                "stateID": 4,
+                "parts": 0
             },
             {
                 "stateID": 1,
-                "parts": 0
+                "parts": 2
             },
             {
                 "stateID": 2,

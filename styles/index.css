@@ -20,7 +20,7 @@ b, strong{
 
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: 550px;
 	margin-bottom: 50px;
 
 }
@@ -46,6 +46,18 @@ b, strong{
 	width: 1500px;
 	height: 100%;
 	border: none;
+}
+#splash_hand_container{
+	bottom: 0;
+    height: 75px;
+}
+#splash_hand{
+	margin: 0 auto;
+    width: 200px;
+    height: 75px;
+    background: url(its_interactive.png);
+    position: relative;
+    left: 370px;
 }
 
 /** THE ESSAY **/

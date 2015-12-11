@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "meow"
+        "description": "In all of these simulations, you can edit EVERYTHING. Draw on the grid, modify the rules, add new emoji, even change these very words you're reading!\n\nThere is *no* difference between playing & making, between reading & writing.\n\nNice.\n\nLet's start. Scroll down this sidebar to edit shtuff."
     },
     "states": [
         {
@@ -19,13 +19,15 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "description": "Blank spots grow trees. (adjust the growth rate below!)"
         },
         {
             "id": 1,
             "icon": "🌲",
             "name": "tree",
-            "actions": []
+            "actions": [],
+            "description": "Trees just chill.\n\n(P.S: To replace emoji, click the icon, and paste in a new emoji: 💩 If you're on a Mac, you can hold down Control+Command+Space. Otherwise, copy-paste emoji from somewhere else like http://GetEmoji.com)"
         }
     ],
     "world": {
@@ -43,7 +45,7 @@
         ],
         "size": {
             "width": 20,
-            "height": 12
+            "height": 15
         }
     }
 }

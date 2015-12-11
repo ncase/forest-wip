@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "description": "1. Watch for a minute. How do the plants behave WITHOUT your intervention?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a bunch of fire-containing bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(5. Explore more???)"
+    },
     "states": [
         {
             "id": 0,
@@ -21,18 +24,21 @@
                     "actions": [
                         {
                             "stateID": "5",
-                            "type": "go_to_state"
+                            "type": "go_to_state",
+                            "actions": []
                         }
                     ],
                     "type": "if_random"
                 }
-            ]
+            ],
+            "description": "Blank spots grow Strong Trees & Jerk Weeds, but Jerk Weeds grow twice as fast."
         },
         {
             "id": 4,
             "icon": "🐻",
             "name": "bear",
-            "actions": []
+            "actions": [],
+            "description": "HA HA HA KILL THE TREES, KILL THEM, KILL THEM ALLLLLLLLLLL"
         },
         {
             "id": 1,
@@ -59,12 +65,14 @@
                     "actions": [
                         {
                             "stateID": 0,
-                            "type": "go_to_state"
+                            "type": "go_to_state",
+                            "actions": []
                         }
                     ],
                     "type": "if_neighbor"
                 }
-            ]
+            ],
+            "description": "Killed by bear neighbors. Also, if at least four neighbors are Jerk Weeds, it'll be choked out and die."
         },
         {
             "id": 5,
@@ -76,7 +84,8 @@
                     "actions": [
                         {
                             "stateID": "2",
-                            "type": "go_to_state"
+                            "type": "go_to_state",
+                            "actions": []
                         }
                     ],
                     "type": "if_random"
@@ -88,7 +97,8 @@
                     "actions": [
                         {
                             "stateID": "2",
-                            "type": "go_to_state"
+                            "type": "go_to_state",
+                            "actions": []
                         }
                     ],
                     "type": "if_neighbor"
@@ -100,12 +110,14 @@
                     "actions": [
                         {
                             "stateID": 0,
-                            "type": "go_to_state"
+                            "type": "go_to_state",
+                            "actions": []
                         }
                     ],
                     "type": "if_neighbor"
                 }
-            ]
+            ],
+            "description": "Can get struck by lightning, and catch on fire. Also killed by bears."
         },
         {
             "id": 2,
@@ -117,7 +129,8 @@
                     "stateID": 0,
                     "actions": []
                 }
-            ]
+            ],
+            "description": "Burrrrnsssssss awayyyyyyyyyyyy"
         }
     ],
     "world": {
@@ -137,12 +150,12 @@
                 "parts": 1
             },
             {
-                "stateID": 2,
-                "parts": 0
-            },
-            {
                 "stateID": 5,
                 "parts": 1
+            },
+            {
+                "stateID": 2,
+                "parts": 0
             }
         ],
         "size": {
