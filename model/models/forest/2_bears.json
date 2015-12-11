@@ -1,7 +1,8 @@
 {
     "meta": {
         "description": "Any tree next to a bear gets killed. 🐻🌲➡🐻◽️\n\n1. CLICK & DRAG across the grid to draw walls of bears!\n\n2. DIVIDE THE GRID into about 10 small sections. (The sections don't have to be even, but make sure there's no huge gaps.)\n\n3. PRESS \"PLAY\".\n\nWhat do you notice? How do the trees/fires act now? (And again, feel free to explore!)",
-        "draw": 4
+        "draw": 4,
+        "fps": 1
     },
     "states": [
         {

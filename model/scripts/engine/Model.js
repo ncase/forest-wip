@@ -37,6 +37,9 @@ as well as serialize & deserialize.
 		Grid.step();
 		publish("/grid/updateAgents");
 
+		// Start animating
+		requestAnimationFrame(Model.tick);
+
 		// Publish
 		publish("/model/init");
 
@@ -60,6 +63,9 @@ as well as serialize & deserialize.
 		Editor.worldDOM.innerHTML = "";
 		Editor.worldDOM.appendChild(Grid.createUI());
 
+		// Publish message
+		publish("/meta/reset/complete");
+
 	};
 
 	// Playing...
@@ -70,18 +76,43 @@ as well as serialize & deserialize.
 	Model.pause = function(){
 		Model.isPlaying = false;
 	};
-	Model.tick = function(){
+	var _lastTimestamp = null;
+	var _ticker = 0;
+	Model.tick = function(timestamp){
 
-		// Paused, or not seen
+		// RAF
+		requestAnimationFrame(Model.tick);
+
+		// Figure out the timing...
+		if(!_lastTimestamp) _lastTimestamp=timestamp;
+		var delta = timestamp-_lastTimestamp;
+		_ticker += delta;
+		_lastTimestamp=timestamp;
+
+		// If _ticker is below the limit to update, don't.
+		var tickerLimit = 1000/Model.data.meta.fps;
+		if(_ticker<tickerLimit) return;
+		
+		// Otherwise, find out how many steps you missed.
+		var steps = 0;
+		while(_ticker>=tickerLimit){
+			steps++;
+			_ticker -= tickerLimit;
+		}
+
+		// Paused, or not seen - also don't update
 		if(!Model.isPlaying) return;
 		if(!window.isOnScreen) return;
 
-		// Step it
-		Grid.step();
+		// If after all that, it should STEP...
+		for(var i=0;i<steps;i++){
+			Grid.step();
+		}
+
+		// ...and UPDATE SCREEN
 		publish("/grid/updateAgents");
 
 	};
-	setInterval(Model.tick,1000/30); // 30 FPS, watchu gonna do about it
 
 	// Helper Functions
 	Model.getStateByID = function(id){

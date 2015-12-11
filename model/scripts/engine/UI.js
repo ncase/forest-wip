@@ -72,6 +72,18 @@ play_step.onclick = function(){
 	publish("/grid/updateAgents");
 };
 
+// PLAYBACK SPEED - OnInput, coz firefox, remember.
+var playback_speed = document.getElementById("control_fps");
+playback_speed.oninput = function(){
+	Model.data.meta.fps = parseInt(playback_speed.value);
+};
+subscribe("/model/init",function(){
+	playback_speed.value = Model.data.meta.fps;
+});
+subscribe("/meta/reset/complete",function(){
+	playback_speed.value = Model.data.meta.fps;
+});
+
 /////////////////////////
 ///// CHANGE STATES /////
 /////////////////////////

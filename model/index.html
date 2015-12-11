@@ -8,26 +8,6 @@
 	<meta content="utf-8" http-equiv="encoding">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<!-- Schema.org markup for Google+ -->
-	<meta itemprop="name" content="A Simulation In Emoji">
-	<meta itemprop="description" content="Simulate the world. In emoji.">
-	<meta itemprop="image" content="http://ncase.me/emoji-prototype/social/thumbnail.png">
-
-	<!-- Twitter Card data -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@ncasenmare">
-	<meta name="twitter:title" content="A Simulation In Emoji">
-	<meta name="twitter:description" content="Simulate the world. In emoji.">
-	<meta name="twitter:creator" content="@ncasenmare">
-	<meta name="twitter:image" content="http://ncase.me/emoji-prototype/social/thumbnail.png">
-
-	<!-- Open Graph data -->
-	<meta property="og:title" content="A Simulation In Emoji">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://ncase.me/emoji-prototype">
-	<meta property="og:image" content="http://ncase.me/emoji-prototype/social/thumbnail.png">
-	<meta property="og:description" content="Simulate the world. In emoji.">
-
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/model.css">
 	<link rel="stylesheet" type="text/css" href="styles/perfect-scrollbar.min.css">
@@ -43,51 +23,45 @@
 		<div id="grid"></div>
 	</div>
 
-	<!-- Play/Pause/Reset/Step controls -->
+	<!-- Play/Pause/Reset/Step/Draw controls -->
 	<div id="play_container">
 		<div id="play_controls">
 			
+			<!-- New Board -->
 			<div class="control_button" id="play_reset">new</div>
-			
 			<div class="control_divider"></div>
 
+			<!-- Playback -->
 			<div class="control_button" id="play_pause">pause</div>
 			<div class="control_speed">
-				<input type="range" min="0" max="10" step="1" style="width:100%; margin:0;">
+				<input id="control_fps" type="range" min="1" max="60" step="1" style="width:100%; margin:0;">
 				<br>
 				<div style="float:left">slow</div>
 				<div style="float:right">fast</div>
 			</div>
 			<div class="control_button" id="play_step">step</div>
-			
 			<div class="control_divider"></div>
 
+			<!-- Drawing Shtuff -->
 			<div class="control_button" id="play_draw">draw <div></div></div>
 
 		</div>
 	</div>
 
 	<!-- The big honkin' editor -->
-	<div id="editor_container"><!-- class="frame"-->
+	<div id="editor_container">
 		<div id="editor"></div>
 	</div>
-	
-	<!--
-	There used to be a graph here.
-	<div id="graph_container">
-		<svg id="graph"></svg>
-	</div>
-	-->
 
 </body>
 </html>
 
 <!-- External Libraries -->
+<script src="scripts/libraries/rAF.js"></script>
 <script src="scripts/libraries/minpubsub.js"></script>
 <script src="scripts/libraries/firebase.min.js"></script>
 <script src="scripts/libraries/reqwest.min.js"></script>
 <script src="scripts/libraries/perfect-scrollbar.min.js"></script>
-<!--script src="scripts/libraries/scrollbar.js"></script-->
 <!--script src="scripts/libraries/promise.js"></script-->
 <!--script src="scripts/libraries/stats.min.js"></script-->
 
