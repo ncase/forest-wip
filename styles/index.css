@@ -53,11 +53,11 @@ b, strong{
 }
 #splash_hand{
 	margin: 0 auto;
-    width: 200px;
+    width: 210px;
     height: 75px;
     background: url(its_interactive.png);
     position: relative;
-    left: 370px;
+    left: 360px;
 }
 
 /** THE ESSAY **/

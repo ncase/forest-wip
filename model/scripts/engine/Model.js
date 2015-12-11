@@ -97,6 +97,7 @@ as well as serialize & deserialize.
 			steps++;
 			_ticker -= tickerLimit;
 		}
+		if(steps>3) steps=3; // yeah don't go overboard here.
 
 		// Paused, or not seen - also don't update
 		if(!Model.data.meta.play) return;

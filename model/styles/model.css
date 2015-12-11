@@ -322,6 +322,15 @@ THE PLAY CONTROLS
 	margin: 5px;
 	margin-bottom: 0;
 }
+#play_controls > div.control_speed > input{
+	width:100%; margin:0;
+}
+#play_controls > div.control_speed > div{
+	/*width: 13px;
+	height: 16px;
+    line-height: 16px;*/
+    font-size: 14px;
+}
 #play_controls > div.control_divider{
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
