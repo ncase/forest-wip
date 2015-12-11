@@ -284,6 +284,7 @@ THE PLAY CONTROLS
     position: absolute;
     left: 0;
     bottom: 0;
+    color: #888;
 }
 #play_controls{
 	width: 430px;
@@ -296,7 +297,6 @@ THE PLAY CONTROLS
 }
 #play_controls > div.control_button{
 	background: #fff;
-	color: #888;
 
 	margin:0 5px;
 	padding: 5px;
@@ -316,11 +316,11 @@ THE PLAY CONTROLS
 #play_controls > div.control_button:hover{
 	background: #eee;
 }
-#play_controls > input.control_range{
-	display: block;
-	float: left;
+#play_controls > div.control_speed{
 	width:100px;
 	height:35px;
+	margin: 5px;
+	margin-bottom: 0;
 }
 #play_controls > div.control_divider{
 	border-left: 1px solid #ccc;
