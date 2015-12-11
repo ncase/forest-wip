@@ -280,39 +280,60 @@ THE PLAY CONTROLS
 #play_container{
 	padding: 10px 0;
     width: 60%;
-    height: 50px;
+    height: 40px;
     position: absolute;
     left: 0;
     bottom: 0;
 }
 #play_controls{
-	width: 240px;
-	height: 50px;
+	width: 430px;
+	height: 40px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 #play_controls > div{
-	background: #ccc;
-	border-radius: 5px;
-	height: 30px;
-	cursor: pointer;
 	float: left;
-	color: #888;
-	padding: 10px;
-	text-align: center;
-	line-height: 30px;
-	font-weight: normal;
 }
-#play_controls > div:hover{
-	background: #ddd;
+#play_controls > div.control_button{
+	background: #fff;
+	color: #888;
+
+	margin:0 5px;
+	padding: 5px;
+
+	line-height: 30px;
+	text-align: center;
+	font-weight: normal;
+
+	-webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -ms-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+
+	cursor: pointer;
+}
+#play_controls > div.control_button:hover{
+	background: #eee;
+}
+#play_controls > input.control_range{
+	display: block;
+	float: left;
+	width:100px;
+	height:35px;
+}
+#play_controls > div.control_divider{
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	width:3px;
+	height: 100%;
+	margin: 0 5px;
 }
 #play_controls > #play_reset{
 	width:40px;
-	margin-right: 10px;
 }
 #play_controls > #play_pause{
-	width:80px;
-	margin-right: 10px;
+	width:50px;
 }
 #play_controls > #play_pause[paused=true]{
 	background: #333;
@@ -324,31 +345,17 @@ THE PLAY CONTROLS
 #play_controls > #play_step{
 	width:40px;
 }
-
-
-/***************
-HACK: SCROLLBARS
-***************/
-
-.frame::-webkit-scrollbar {
-    -webkit-appearance: none;
+#play_controls > #draw_icon{
+	width:80px;
 }
-
-.frame::-webkit-scrollbar:vertical {
-    width: 20px;
-}
-
-.frame::-webkit-scrollbar:horizontal {
-    height: 11px;
-}
-
-.frame::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, .5);
-}
-
-.frame::-webkit-scrollbar-track {
-    background-color: #fff;
-    border-radius: 0px;
+#play_controls > #draw_icon > div{
+	float: right;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 5px;
 }

@@ -46,9 +46,19 @@
 	<!-- Play/Pause/Reset/Step controls -->
 	<div id="play_container">
 		<div id="play_controls">
-			<div id="play_reset">new</div>
-			<div id="play_pause">pause</div>
-			<div id="play_step">step</div>
+			
+			<div class="control_button" id="play_reset">new</div>
+			
+			<div class="control_divider"></div>
+
+			<div class="control_button" id="play_pause">pause</div>
+			<input class="control_range" type="range" min="0" max="10" step="1">
+			<div class="control_button" id="play_step">step</div>
+			
+			<div class="control_divider"></div>
+
+			<div class="control_button" id="draw_icon">draw <div>🌲</div></div>
+
 		</div>
 	</div>
 
