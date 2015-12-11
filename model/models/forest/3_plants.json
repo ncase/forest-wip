@@ -1,6 +1,9 @@
 {
     "meta": {
-        "description": "1. Watch for a minute. How do the plants behave WITHOUT your intervention?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a bunch of fire-containing bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(5. Explore more???)"
+        "description": "1. Watch for a minute. How do the plants behave WITHOUT your intervention?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a bunch of fire-containing bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(5. Explore more???)",
+        "draw": 4,
+        "fps": 30,
+        "play": true
     },
     "states": [
         {

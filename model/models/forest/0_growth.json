@@ -1,6 +1,9 @@
 {
     "meta": {
-        "description": "In all of these simulations, you can edit EVERYTHING. Draw on the grid, modify the rules, add new emoji, even change these very words you're reading!\n\nThere is *no* difference between playing & making, between reading & writing.\n\nNice.\n\nLet's start. Scroll down this sidebar to edit shtuff."
+        "description": "In all of these simulations, you can edit EVERYTHING. Draw on the grid, modify the rules, add new emoji, even change these very words you're reading!\n\nThere is *no* difference between playing & making, between reading & writing.\n\nNice.\n\nLet's start. Scroll down this sidebar to edit shtuff.",
+        "draw": 1,
+        "fps": 30,
+        "play": true
     },
     "states": [
         {

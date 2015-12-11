@@ -26,10 +26,9 @@ var _optionHelper = function(property, defaultValue){
 	if(option=="false" || option=="no") options[property]=false;
 };
 
-// Controls, Save, Auto
+// Controls, Save
 _optionHelper("controls",true);
 _optionHelper("save",true);
-_optionHelper("auto",true);
 
 
 /////////////////////////
@@ -45,11 +44,11 @@ play_reset.onclick = function(){
 // PLAY/PAUSE
 var play_pause = document.getElementById("play_pause");
 play_pause.onclick = function(){
-	Model.isPlaying = !Model.isPlaying;
+	Model.data.meta.play = !Model.data.meta.play;
 	updatePauseUI();
 };
 var updatePauseUI = function(){
-	if(Model.isPlaying){
+	if(Model.data.meta.play){
 		play_pause.innerHTML = "pause";
 		play_pause.setAttribute("paused",false);
 	}else{
@@ -57,11 +56,6 @@ var updatePauseUI = function(){
 		play_pause.setAttribute("paused",true);
 	}
 };
-// Is it already paused???
-if(!options.auto){
-	Model.isPlaying = false;
-	updatePauseUI();
-}
 
 // STEP
 var play_step = document.getElementById("play_step");
@@ -77,10 +71,14 @@ var playback_speed = document.getElementById("control_fps");
 playback_speed.oninput = function(){
 	Model.data.meta.fps = parseInt(playback_speed.value);
 };
+
+// UPDATE THE PLAYBACK UI
 subscribe("/model/init",function(){
+	updatePauseUI();
 	playback_speed.value = Model.data.meta.fps;
 });
 subscribe("/meta/reset/complete",function(){
+	updatePauseUI();
 	playback_speed.value = Model.data.meta.fps;
 });
 

@@ -31,7 +31,6 @@ as well as serialize & deserialize.
 
 		// Update the emoji
 		publish("/grid/updateSize");
-		Model.isPlaying = UI.options.auto;
 
 		// Step it ONCE
 		Grid.step();
@@ -69,12 +68,11 @@ as well as serialize & deserialize.
 	};
 
 	// Playing...
-	Model.isPlaying = false;
 	Model.play = function(){
-		Model.isPlaying = true;
+		Model.data.meta.play = true;
 	};
 	Model.pause = function(){
-		Model.isPlaying = false;
+		Model.data.meta.play = false;
 	};
 	var _lastTimestamp = null;
 	var _ticker = 0;
@@ -101,7 +99,7 @@ as well as serialize & deserialize.
 		}
 
 		// Paused, or not seen - also don't update
-		if(!Model.isPlaying) return;
+		if(!Model.data.meta.play) return;
 		if(!window.isOnScreen) return;
 
 		// If after all that, it should STEP...

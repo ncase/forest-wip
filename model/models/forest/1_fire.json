@@ -1,6 +1,9 @@
 {
     "meta": {
-        "description": "The growth rate starts at 0.2%. What happens when you increase it to 0.5%? 1%? 5%? \n\n(Or in the other direction, what happens when the growth rate is 0.1%? Or 0%?)\n\nFeel free to mess around afterwards! Add some animals that move around... Change how often lightning strikes trees... Change how often lightning strikes animals... y'know, whatever you want!"
+        "description": "The growth rate starts at 0.2%. What happens when you increase it to 0.5%? 1%? 5%? \n\n(Or in the other direction, what happens when the growth rate is 0.1%? Or 0%?)\n\nFeel free to mess around afterwards! Add some animals that move around... Change how often lightning strikes trees... Change how often lightning strikes animals... y'know, whatever you want!",
+        "draw": 2,
+        "fps": 30,
+        "play": true
     },
     "states": [
         {
