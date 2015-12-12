@@ -32,12 +32,9 @@ as well as serialize & deserialize.
 		// Update the emoji
 		publish("/grid/updateSize");
 
-		// Step it ONCE
-		Grid.step();
-		publish("/grid/updateAgents");
-
 		// Start animating
 		requestAnimationFrame(Model.tick);
+		publish("/grid/updateAgents"); // show it at first, in case it's paused
 
 		// Publish
 		publish("/model/init");
