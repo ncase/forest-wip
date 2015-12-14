@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "Any tree next to a bear gets killed. 🐻🌲➡🐻◽️\n\n1. CLICK & DRAG across the grid to draw walls of bears!\n\n2. DIVIDE THE GRID into about 10 small sections. (The sections don't have to be even, but make sure there's no huge gaps.)\n\n3. PRESS \"PLAY\".\n\nWhat do you notice? How do the trees/fires act now? (And again, feel free to explore!)",
+        "description": "Bears kill trees next to them. Click and drag across the grid to make \"walls\" of bears. Divide the forest into 10 small sections. What happens now?",
         "draw": 4,
         "fps": 30,
         "play": true
@@ -23,7 +23,7 @@
                     ]
                 }
             ],
-            "description": "Blank spots grow trees."
+            "description": "Grows trees."
         },
         {
             "id": 4,
@@ -75,7 +75,7 @@
                     "type": "if_neighbor"
                 }
             ],
-            "description": "Can get hit by lightning. Catches on fire if a neighbor's on fire. Gets killed if next to a bear."
+            "description": "Catches on fire if hit by lightning, or if a neighbor's on fire. Gets killed if next to a bear."
         },
         {
             "id": 2,
@@ -88,7 +88,7 @@
                     "actions": []
                 }
             ],
-            "description": "Burns away in one turn."
+            "description": "Burns away."
         }
     ],
     "world": {

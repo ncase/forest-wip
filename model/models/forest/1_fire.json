@@ -55,7 +55,7 @@
                     ]
                 }
             ],
-            "description": "Gets hit by lightning, and catches on fire if a neighbor's on fire."
+            "description": "Catches on fire if hit by lightning, or if a neighbor's on fire."
         },
         {
             "id": 2,

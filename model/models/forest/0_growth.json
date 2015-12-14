@@ -1,7 +1,7 @@
 {
     "meta": {
         "description": "In all of these sims, you can edit EVERYTHING. There is *no* difference in playing & making, in reading & writing.\n\nScroll down to change stuff!",
-        "draw": 1,
+        "draw": 2,
         "fps": 15,
         "play": true
     },
@@ -13,7 +13,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 0.00,
+                    "probability": 0.002,
                     "actions": [
                         {
                             "type": "go_to_state",
@@ -29,8 +29,33 @@
             "id": 1,
             "icon": "🌲",
             "name": "tree",
-            "actions": [],
-            "description": "Trees just chill.\n\n(To replace emoji, click the icon, and paste in a new emoji: 🎄 If you're on a Mac, you can press Control+Command+Space to get emoji. Otherwise, copy-paste emoji from somewhere like GetEmoji.com)"
+            "actions": [
+                {
+                    "sign": ">=",
+                    "num": 1,
+                    "stateID": "2",
+                    "actions": [
+                        {
+                            "stateID": "2",
+                            "type": "go_to_state"
+                        }
+                    ],
+                    "type": "if_neighbor"
+                }
+            ],
+            "description": "Trees can catch on fire.\n\n(To replace emoji, click the icon, and paste in a new emoji: 🎄 If you're on a Mac, you can press Control+Command+Space to get emoji. Otherwise, copy-paste emoji from somewhere like GetEmoji.com)"
+        },
+        {
+            "id": 2,
+            "icon": "🔥",
+            "name": "fire",
+            "description": "Burns away.\n\n(You can also add new rules, even create new objects! The only limit is your ✨🌟IMAGINATION🌟✨)",
+            "actions": [
+                {
+                    "stateID": 0,
+                    "type": "go_to_state"
+                }
+            ]
         }
     ],
     "world": {
@@ -39,11 +64,11 @@
         "proportions": [
             {
                 "stateID": 0,
-                "parts": 95
+                "parts": 90
             },
             {
                 "stateID": 1,
-                "parts": 5
+                "parts": 10
             },
             {
                 "stateID": 2,
