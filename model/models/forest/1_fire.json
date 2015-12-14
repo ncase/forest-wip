@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "The growth rate starts at 0.2%. What happens when you increase it to 0.5%? 1%? 5%? \n\n(Or in the other direction, what happens when the growth rate is 0.1%? Or 0%?)\n\nFeel free to mess around afterwards! Add some animals that move around... Change how often lightning strikes trees... Change how often lightning strikes animals... y'know, whatever you want!",
+        "description": "The growth rate starts at 0.2%. What happens when you increase it to 0.5%? 1%? 5%?\n\n(Also, you can now pause the sim, and click-and-drag on the grid to \"draw\" objects onto it)",
         "draw": 2,
         "fps": 30,
         "play": true
@@ -23,7 +23,7 @@
                     ]
                 }
             ],
-            "description": "Blank spots grow trees. (again, adjust the growth rate below!)"
+            "description": "Grows trees."
         },
         {
             "id": 1,
@@ -55,7 +55,7 @@
                     ]
                 }
             ],
-            "description": "Has a small chance of getting hit by lightning & catching on fire. Also, if any neighbors are on fire, it also catches on fire."
+            "description": "Gets hit by lightning, and catches on fire if a neighbor's on fire."
         },
         {
             "id": 2,
@@ -68,7 +68,7 @@
                     "actions": []
                 }
             ],
-            "description": "Burns away in one turn."
+            "description": "Burns away."
         }
     ],
     "world": {

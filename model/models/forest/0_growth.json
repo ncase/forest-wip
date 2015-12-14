@@ -1,8 +1,8 @@
 {
     "meta": {
-        "description": "In all of these simulations, you can edit EVERYTHING. Draw on the grid, modify the rules, add new emoji, even change these very words you're reading!\n\nThere is *no* difference between playing & making, between reading & writing.\n\nNice.\n\nLet's start. Scroll down this sidebar to edit shtuff.",
+        "description": "In all of these sims, you can edit EVERYTHING. There is *no* difference in playing & making, in reading & writing.\n\nScroll down to change stuff!",
         "draw": 1,
-        "fps": 30,
+        "fps": 15,
         "play": true
     },
     "states": [
@@ -13,7 +13,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 0.0001,
+                    "probability": 0.00,
                     "actions": [
                         {
                             "type": "go_to_state",
@@ -23,14 +23,14 @@
                     ]
                 }
             ],
-            "description": "Blank spots grow trees. (adjust the growth rate below!)"
+            "description": "Grows trees. (Adjust growth below!)"
         },
         {
             "id": 1,
             "icon": "🌲",
             "name": "tree",
             "actions": [],
-            "description": "Trees just chill.\n\n(P.S: To replace emoji, click the icon, and paste in a new emoji: 🎄 If you're on a Mac, you can hold down Control+Command+Space. Otherwise, copy-paste emoji from somewhere else like http://GetEmoji.com)"
+            "description": "Trees just chill.\n\n(To replace emoji, click the icon, and paste in a new emoji: 🎄 If you're on a Mac, you can press Control+Command+Space to get emoji. Otherwise, copy-paste emoji from somewhere like GetEmoji.com)"
         }
     ],
     "world": {
@@ -39,16 +39,20 @@
         "proportions": [
             {
                 "stateID": 0,
-                "parts": 98
+                "parts": 95
             },
             {
                 "stateID": 1,
-                "parts": 2
+                "parts": 5
+            },
+            {
+                "stateID": 2,
+                "parts": 0
             }
         ],
         "size": {
-            "width": 20,
-            "height": 15
+            "width": 10,
+            "height": 10
         }
     }
 }
