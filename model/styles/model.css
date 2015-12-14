@@ -368,3 +368,13 @@ THE PLAY CONTROLS
     text-align: center;
     margin-left: 5px;
 }
+#play_controls[basic]{
+	width: 265px;
+}
+#play_controls[basic] > div.control_speed{
+	display: none;
+}
+#play_controls[basic] > #play_step{
+	display: none;
+}
+

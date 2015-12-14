@@ -27,7 +27,7 @@ as well as serialize & deserialize.
 		Grid.initialize();
 
 		// Any controls at all?
-		if(UI.options.controls) Editor.create(Model.data);
+		if(UI.options.edit!=UI.NONE) Editor.create(Model.data);
 
 		// Update the emoji
 		publish("/grid/updateSize");

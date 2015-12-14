@@ -14,21 +14,44 @@ function getParameterByName(name) {
 
 // UI Vars, like options
 exports.UI = {
-	options:{}
-};
-var options = UI.options;
-
-// Option Helper
-var _optionHelper = function(property, defaultValue){
-	var option = getParameterByName(property);
-	if(option=="") options[property]=defaultValue;
-	if(option=="true" || option=="yes") options[property]=true;
-	if(option=="false" || option=="no") options[property]=false;
+	options:{},
+	NONE: 0,
+	BASIC: 1,
+	ADVANCED: 2
 };
 
-// Controls, Save
-_optionHelper("controls",true);
-_optionHelper("save",true);
+// How much UI to show?
+// Edit Sidebar: 0-none, 1-basic, 2-advanced
+// Play Controls: 0-none, 1-basic, 2-advanced
+// BG: 0-none, 1-basic(grid)
+UI.options.edit = getParameterByName("edit") || 2;
+UI.options.play = getParameterByName("play") || 2;
+UI.options.bg = getParameterByName("bg") || 1;
+
+
+///////////////////////////////
+///// HIDE INTERAFACES??? /////
+///////////////////////////////
+
+// Edit Sidebar
+if(UI.options.edit==UI.NONE){
+	document.getElementById("editor_container").style.display = "none";
+}
+
+// Play Controls
+if(UI.options.play==UI.NONE){
+	document.getElementById("play_container").style.display = "none";
+}
+if(UI.options.play==UI.BASIC){
+	document.getElementById("play_controls").setAttribute("basic",true);
+}
+
+// The Background
+if(UI.options.bg==UI.NONE){
+	// CSS: transparent BG, no grid.
+	var css = document.getElementById("ui_style");
+	css.innerHTML = "#grid_bg, #grid_bg>div>div{ border: none; }";
+}
 
 
 /////////////////////////
@@ -284,29 +307,6 @@ window.addEventListener("resize",function(){
 	publish("ui/resize");
 },false);
 
-
-/////////////////////////
-///// HIDE IT ALL?? /////
-/////////////////////////
-
-var play_container = document.getElementById("play_container");
-if(!UI.options.controls){
-
-	// Hide editor & player
-	editor_container.style.display = "none";
-	play_container.style.display = "none";
-
-	// CSS: transparent BG, no grid.
-	var css = document.getElementById("ui_style");
-	css.innerHTML = ""+
-	"body{"+
-		"background: none;"+
-	"}"+
-	"#grid_bg, #grid_bg>div>div{"+
-		"border: none;"+
-	"}";
-
-}
 
 
 })(window);

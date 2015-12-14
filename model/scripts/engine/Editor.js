@@ -101,7 +101,7 @@ Editor.create = function(){
 	Editor.dom.appendChild(undoChanges);
 
 	// If options allow saving changes
-	if(UI.options.save){
+	if(UI.options.edit==UI.ADVANCED){
 
 		// Save your changes
 		var saveChanges = document.createElement("div");
