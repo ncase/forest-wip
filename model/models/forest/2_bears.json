@@ -1,6 +1,6 @@
 {
     "meta": {
-        "description": "Bears kill trees next to them. Click and drag across the grid to make \"walls\" of bears. Divide the forest into 10 small sections. What happens now?",
+        "description": "Bears wipe out any trees next to them. Yeah don't ask how.\n\n1. Watch how the fire spreads.\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Click and drag across the grid to make \"walls\" of bears. Divide the forest into 10 small sections. What happens now?",
         "draw": 4,
         "fps": 30,
         "play": true
@@ -13,7 +13,7 @@
             "actions": [
                 {
                     "type": "if_random",
-                    "probability": 0.005,
+                    "probability": 0.01,
                     "actions": [
                         {
                             "type": "go_to_state",

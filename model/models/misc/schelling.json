@@ -1,4 +1,10 @@
 {
+    "meta": {
+        "description": "The growth rate starts at 0.2%. What happens when you increase it to 0.5%? 1%? 5%?\n\n(Also, you can now pause the sim, and click-and-drag on the grid to \"draw\" objects onto it)",
+        "draw": 0,
+        "fps": 30,
+        "play": true
+    },
     "states": [
         {
             "id": 0,

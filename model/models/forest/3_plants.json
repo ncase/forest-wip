@@ -1,8 +1,8 @@
 {
     "meta": {
-        "description": "1. Watch for a minute. How do the plants behave WITHOUT your intervention?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a bunch of fire-containing bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(5. Explore more???)",
+        "description": "1. Just watch for a minute. How do the plants behave normally?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a few bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(Also, you can now control how fast the simulation runs!)",
         "draw": 4,
-        "fps": 30,
+        "fps": 60,
         "play": true
     },
     "states": [
@@ -34,14 +34,14 @@
                     "type": "if_random"
                 }
             ],
-            "description": "Blank spots grow Strong Trees & Jerk Weeds, but Jerk Weeds grow twice as fast."
+            "description": "Grows Strong Trees & Jerk Weeds, but Jerk Weeds grow twice as fast."
         },
         {
             "id": 4,
             "icon": "🐻",
             "name": "bear",
             "actions": [],
-            "description": "HA HA HA KILL THE TREES, KILL THEM, KILL THEM ALLLLLLLLLLL"
+            "description": "TREES, ONLY DEATH AWAITS YOU"
         },
         {
             "id": 1,
@@ -75,7 +75,7 @@
                     "type": "if_neighbor"
                 }
             ],
-            "description": "Killed by bear neighbors. Also, if at least four neighbors are Jerk Weeds, it'll be choked out and die."
+            "description": "Invincible to fire, but if four or more of its neighbors are Jerk Weeds, it'll be choked of nutrients and die. Also, can be killed by bears."
         },
         {
             "id": 5,
@@ -120,7 +120,7 @@
                     "type": "if_neighbor"
                 }
             ],
-            "description": "Can get struck by lightning, and catch on fire. Also killed by bears."
+            "description": "Flammable, and sometimes spontaneously catches on fire. Also, can be killed by bears."
         },
         {
             "id": 2,
@@ -133,7 +133,7 @@
                     "actions": []
                 }
             ],
-            "description": "Burrrrnsssssss awayyyyyyyyyyyy"
+            "description": "Burns away."
         }
     ],
     "world": {

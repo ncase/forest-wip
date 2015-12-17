@@ -1,8 +1,8 @@
 {
     "meta": {
-        "description": "1. Watch for a minute. How do the plants behave WITHOUT your intervention?\n\n2. Hit \"pause\", then hit \"new\".\n\n3. Draw a bunch of fire-containing bear-walls. Make around 10 small sections.\n\n4. Hit \"play\", and watch what happens. How do the plants behave now?\n\n(5. Explore more???)",
+        "description": "Try to maintain a healthy forest, and save as many houses as you can. Change the rules and draw on the grid, to simulate whatever strategy you want!\n\n(For example: to simulate extinguishing fires in real-time, set the simulation to its slowest speed, and try to draw blank spots over flames that pop up. It's... really hard.)",
         "draw": 4,
-        "fps": 10,
+        "fps": 30,
         "play": false
     },
     "states": [
@@ -34,14 +34,14 @@
                     "type": "if_random"
                 }
             ],
-            "description": "Blank spots grow Strong Trees & Jerk Weeds, but Jerk Weeds grow twice as fast."
+            "description": "Grows Strong Trees & Jerk Weeds, but Jerk Weeds grow twice as fast."
         },
         {
             "id": 4,
             "icon": "🐻",
             "name": "bear",
             "actions": [],
-            "description": "HA HA HA KILL THE TREES, KILL THEM, KILL THEM ALLLLLLLLLLL"
+            "description": "I AM THE END, AND THERE WILL BE NO MERCY"
         },
         {
             "id": 1,
@@ -75,7 +75,7 @@
                     "type": "if_neighbor"
                 }
             ],
-            "description": "Killed by bear neighbors. Also, if at least four neighbors are Jerk Weeds, it'll be choked out and die."
+            "description": "Invincible to fire, but if four or more of its neighbors are Jerk Weeds, it'll be choked of nutrients and die. Also, can be killed by bears."
         },
         {
             "id": 5,
@@ -96,7 +96,7 @@
                     "type": "if_neighbor"
                 },
                 {
-                    "probability": 0.0001,
+                    "probability": 0.0005,
                     "actions": [
                         {
                             "stateID": "2",
@@ -120,7 +120,7 @@
                     "type": "if_neighbor"
                 }
             ],
-            "description": "Can get struck by lightning, and catch on fire. Also killed by bears."
+            "description": "Flammable, and sometimes spontaneously catches on fire. Also, can be killed by bears."
         },
         {
             "id": 2,
@@ -133,17 +133,17 @@
                     "actions": []
                 }
             ],
-            "description": "Burrrrnsssssss awayyyyyyyyyyyy"
+            "description": "Burns away."
         },
         {
             "id": 6,
             "icon": "🏠",
             "name": "house",
-            "description": "If two neighboring spots are on fire, EVERYONE INSIDE DIES",
+            "description": "If a neighboring spot is on fire, EVERYONE INSIDE DIES",
             "actions": [
                 {
                     "sign": ">=",
-                    "num": 2,
+                    "num": 1,
                     "stateID": "2",
                     "actions": [
                         {
@@ -160,7 +160,7 @@
             "id": 7,
             "icon": "💀",
             "name": "dead house",
-            "description": "ded",
+            "description": "they ded",
             "actions": []
         }
     ],
@@ -178,11 +178,11 @@
             },
             {
                 "stateID": 1,
-                "parts": 2
+                "parts": 38
             },
             {
                 "stateID": 5,
-                "parts": 97.5
+                "parts": 60
             },
             {
                 "stateID": 2,
@@ -190,7 +190,7 @@
             },
             {
                 "stateID": 6,
-                "parts": 0.5
+                "parts": 2
             },
             {
                 "stateID": 7,
@@ -198,8 +198,8 @@
             }
         ],
         "size": {
-            "width": 30,
-            "height": 25
+            "width": 20,
+            "height": 16
         }
     }
 }
